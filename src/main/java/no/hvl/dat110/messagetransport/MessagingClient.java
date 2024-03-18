@@ -2,7 +2,6 @@ package no.hvl.dat110.messagetransport;
 
 
 import java.io.IOException;
-
 import java.net.Socket;
 
 public class MessagingClient {

@@ -30,10 +30,13 @@ public class MessagingServer {
 		// accept TCP connection on welcome socket and create connection
 		
 		try {
+			if (welcomeSocket != null) {
+				Socket connectionSocket = welcomeSocket.accept();
+				connection = new Connection(connectionSocket);
+			}
+
 			
-			Socket connectionSocket = welcomeSocket.accept();
-			
-			connection = new Connection(connectionSocket);
+
 			
 		} catch (IOException ex) {
 			
